@@ -35,13 +35,15 @@
             // ticker
             // 
             ticker.Enabled = true;
+            ticker.Interval = 10;
             ticker.Tick += NewFrame;
             // 
             // AirSpace
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1357, 567);
+            BackColor = Color.AntiqueWhite;
+            ClientSize = new Size(1904, 1041);
             Name = "AirSpace";
             Text = "AirSpace";
             Load += AirSpace_Load;

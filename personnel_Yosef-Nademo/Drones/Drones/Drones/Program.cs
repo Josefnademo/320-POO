@@ -12,7 +12,7 @@ namespace Drones
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            // Création de la flotte de drones
+            // Création de la flotte de 
             List<Drone> fleet= new List<Drone>();
             Drone drone = new Drone();
             drone.x = 100;
@@ -22,6 +22,7 @@ namespace Drones
 
             // Démarrage
             Application.Run(new AirSpace(fleet));
+            
         }
     }
 }
