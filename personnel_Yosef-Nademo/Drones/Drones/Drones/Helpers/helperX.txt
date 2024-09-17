@@ -1,0 +1,10 @@
+using System;
+
+namespace Drones{
+internal static class{
+
+public string  Random{}
+
+
+}
+}
