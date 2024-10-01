@@ -37,18 +37,18 @@ namespace Parachutes
         public int altitude;
         public bool parachuteIsOpen;
 
-        /// <summary>
+
         /// Constructor
-        /// </summary>
+   
         /// <param name="name"></param>
         public Para(string name)
         {
             this.name = name;
         }
 
-        /// <summary>
+    
         /// Make the parachutist move
-        /// </summary>
+    
         internal void update()
         {
             if (altitude > PARA_HEIGHT) // il est en l'air

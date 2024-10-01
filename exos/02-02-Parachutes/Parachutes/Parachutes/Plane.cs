@@ -28,9 +28,9 @@ namespace Parachutes
         public int altitude;
         public List<Para> parachutists;
 
-        /// <summary>
+       
         /// Constructor
-        /// </summary>
+        
         public Plane()
         {
             x = 0;
@@ -38,9 +38,9 @@ namespace Parachutes
             parachutists = new List<Para>();
         }
 
-        /// <summary>
+       
         /// Render
-        /// </summary>
+     
         public void draw()
         {
             for (int i = 0; i < view.Length; i++)
@@ -50,9 +50,9 @@ namespace Parachutes
             }
         }
 
-        /// <summary>
+        
         /// Move the plane
-        /// </summary>
+        
         public void update()
         {
             if (x >= Config.SCREEN_WIDTH)
@@ -65,9 +65,9 @@ namespace Parachutes
             }
         }
 
-        /// <summary>
+    
         /// Take a parachustist on board
-        /// </summary>
+       
         /// <param name="para"></param>
         public void board(Para para)
         {

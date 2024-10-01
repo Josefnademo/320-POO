@@ -14,7 +14,7 @@ List<Para> parachutistsInTheAir = new List<Para>();
 
 // Créer l'avion et embarquer le club
 Plane plane = new Plane();
-for (int i = 0; i < 8; i++)
+for (int i = 0; i < 100; i++)
 {
     plane.board(new Para("Bob "+i.ToString()));
 }
@@ -50,7 +50,7 @@ while (true)
     {
         para.draw();
     }
-    Thread.Sleep(100);
+    Thread.Sleep(1);
 }
 
 

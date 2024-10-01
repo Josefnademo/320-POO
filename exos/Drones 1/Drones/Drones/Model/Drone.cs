@@ -1,8 +1,19 @@
-﻿namespace Drones
+﻿using System;
+using System.Media;
+
+
+namespace Drones
 {
-    // Cette partie de la classe Drone définit ce qu'est un drone par un modèle numérique
-    public partial class Drone
+    interface IDroneSound
     {
+        void droneSound(string soundChemain); // interface method (does not have a body)
+    }
+   
+
+    // Cette partie de la classe Drone définit ce qu'est un drone par un modèle numérique
+    public partial class Drone : IDroneSound
+    {
+
         Random alea = new Random();
 
         public int charge = 1000;                     // La charge actuelle de la batterie
@@ -20,6 +31,9 @@
             charge--;                                  // Il a dépensé de l'énergie
         }
 
+
+
+        
     }
     public partial class Buliding
     {
