@@ -4,15 +4,51 @@ using System.Media;
 
 namespace Drones
 {
-    interface IDroneSound
+    public enum EvacuationState
     {
-        void droneSound(string soundChemain); // interface method (does not have a body)
+        Free,           // No limits applied
+        Evacuating,     // Limits known, moving out of the zone
+        Evacuated       // Limits known, out of the zone
     }
-   
+
+    public interface IExpellable
+    {
+        // Signal the limits of the no-fly zone 
+        // Return true if the drone is already outside the zone
+        public bool Evacuate(Rectangle zone);
+
+        // Terminate the no-fly zone
+        public void FreeFlight();
+
+        // Interrogate the drone
+        public EvacuationState GetEvacuationState();
+    }
+
 
     // Cette partie de la classe Drone définit ce qu'est un drone par un modèle numérique
-    public partial class Drone : IDroneSound
+    public partial class Drone : IExpellable
     {
+        // Ajoutez ici les champs nécessaires pour gérer l'état d'évacuation
+        private EvacuationState evacuationState = EvacuationState.Free;
+
+        // Implémentez les méthodes de l'interface
+        public bool Evacuate(Rectangle zone)
+        {
+            // Implémentation temporaire pour que le code compile
+            return false;
+        }
+
+        public void FreeFlight()
+        {
+            evacuationState = EvacuationState.Free;
+        }
+
+        public EvacuationState GetEvacuationState()
+        {
+            return evacuationState;
+        }
+
+        // Continuez à utiliser votre méthode Update() et les autres éléments du drone...
 
         Random alea = new Random();
 
@@ -32,7 +68,10 @@ namespace Drones
         }
 
 
+        public void IExpellable()
+        {
 
+        }
         
     }
     public partial class Buliding
